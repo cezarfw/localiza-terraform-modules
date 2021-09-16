@@ -1,11 +1,3 @@
-module "label" {
-  source = "../../label"
-
-  name    = var.name
-  service = var.labels.service
-  team    = var.labels.team
-}
-
 resource "aws_iam_user" "default" {
   name = var.name
   tags = module.label.tags
